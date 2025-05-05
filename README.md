@@ -1,76 +1,58 @@
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=526682619)
+# Portfólio Web com JavaScript, GitHub Codespaces e Copilot
 
-# Use GitHub Copilot to write JavaScript
+Este projeto é uma aplicação web de portfólio pessoal desenvolvida com o objetivo de ajudar você a criar, personalizar e publicar seu próprio site de portfólio de forma rápida e simples. Ele utiliza tecnologias modernas como React e é configurado para funcionar diretamente no navegador usando GitHub Codespaces.
 
-Explore how you can modify a JavaScript repository using code suggestions from GitHub Copilot to modify and customize a web application. By working with this repository, you'll quickly get hands-on with a JavaScript web app for a portfolio site.
+## O que este projeto faz?
 
-## Requirements
+- Exibe informações pessoais, como "Sobre mim" e redes sociais.
+- Apresenta projetos nos quais você trabalhou, com título, descrição e links.
+- Permite personalização de imagens, textos e seções.
+- Pode ser publicado na nuvem usando Azure Static Web Apps ou GitHub Pages.
 
-1. Enable your [GitHub Copilot service](https://github.com/github-copilot/signup)
-1. Open [this repository with Codespaces](https://codespaces.new/MicrosoftDocs/mslearn-copilot-codespaces-javascript?quickstart=1)
+## Tecnologias utilizadas
 
-## 💪🏽 Exercise
+- **Linguagens**: JavaScript, HTML, CSS.
+- **Framework**: React.
+- **Ferramentas**:
+  - [Parcel](https://parceljs.org/) para empacotamento e construção.
+  - [ESLint](https://eslint.org/) e [Prettier](https://prettier.io/) para qualidade e formatação de código.
+  - [GitHub Codespaces](https://github.com/features/codespaces/) para desenvolvimento no navegador.
+  - [GitHub Copilot](https://copilot.github.com) para sugestões de código.
 
-In this template portfolio, we have a React based web application ready for you to easily customize and deploy using only your web browser.
+## Como fazer funcionar?
 
+1. **Crie um Codespace**:
+   - Clique no botão **"Use this Template"** no repositório e crie um novo repositório.
+   - Na aba **Codespaces**, selecione **"Create codespace on main"**.
 
-### 🛠 Step 1: Customize the web app
+2. **Instale as dependências**:
+   - No terminal do Codespace, execute:
+     ```bash
+     npm install
+     ```
 
-Customize the portfolio with your own links. Go to `src/App.jsx` and update the `siteProps` with your information. The `siteProps` variable is a JavaScript object that holds key value pairs used to customize the site, it should look like this:
+3. **Inicie o servidor de desenvolvimento**:
+   - Execute:
+     ```bash
+     npm run start
+     ```
+   - O site será iniciado no navegador no endereço `http://localhost:1234`.
 
-```javascript
-const siteProps = {
-  name: "Alexandrie Grenier",
-  title: "Web Designer & Content Creator",
-  email: "alex@example.com",
-  gitHub: "microsoft",
-  instagram: "microsoft",
-  linkedIn: "satyanadella",
-  medium: "",
-  twitter: "microsoft",
-  youTube: "Code",
-};
-```
+4. **Personalize o site**:
+   - Edite os arquivos em [Components](http://_vscodecontentref_/0) para atualizar informações como "Sobre mim", projetos e imagens.
 
-### 🔎 Step 2: Animate the social media icons with a prompt
+5. **Publique na nuvem**:
+   - Para GitHub Pages:
+     - Atualize o campo `homepage` no [package.json](http://_vscodecontentref_/1).
+     - Execute:
+       ```bash
+       npm run deploy
+       ```
+   - Para Azure Static Web Apps:
+     - Configure o serviço no menu Azure do VS Code.
 
-An animation can make the social media section more eye-catching. Ask Copilot’s help to animate the icons. Write the following prompt in the `src/styles.css` file:
+## Recursos adicionais
 
-```css
-/* add an amazing animation to the social icons */
-```
-
-The suggestion from Copilot should look similar to the following:
-
-```css
-img.socialIcon:hover {
-  animation: bounce 0.5s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-```
-
-### 🚀 Step 3: Find out how to run the app
-Open GitHub Copilot chat by clicking on the chat icon on the left side bar and use the input section to ask the following:
-
-```
-@workspace I want to understand how can I run this React application
-```
-
-The prompts uses `@workspace` which is a special feature of GitHub Copilot chat that allows you to include more context for a more complete answer. Try out other queries using the chat panel for a more interactive workflow.
-
-### Conclusion
-Your site should already be running in your Codespace, and the change will reload onto the page automatically. To see them, hover over one of your social media icons in the footer to see the magic!
-
-Congratulations, through the exercise, you have use GitHub Copilot to generate code and also done it in an interactive and fun way! You can use GitHub Copilot to not only generate code, but write documentation, test your applications and more.
+- [Documentação do React](https://reactjs.org/)
+- [Guia do GitHub Codespaces](https://docs.github.com/en/codespaces/guides)
+- [Documentação do GitHub Copilot](https://docs.github.com/en/copilot)
