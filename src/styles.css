@@ -14,6 +14,17 @@ body {
   width: 100%;
 }
 
+/* Add animation for social icons */
+img.socialIcon {
+  height: 30px;
+  width: 30px;
+  transition: transform 0.3s ease-in-out;
+}
+
+img.socialIcon:hover {
+  transform: scale(1.2) rotate(15deg);
+}
+
 div#main {
   display: flex;
   flex-direction: column;
